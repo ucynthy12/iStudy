@@ -20,6 +20,7 @@ from rest_framework.authtoken.models import Token
 
 
 
+
 # Create your views here.
 
 def index(request):
@@ -91,6 +92,7 @@ def registration_view(request):
 
         else:
             data = serializer.errors
+            print(data)
         return Response(data)
 
 # @api_view(['POST',])
@@ -111,3 +113,4 @@ def registration_view(request):
 #         else:
 #             data = serializer.errors
 #         return Response(data)
+

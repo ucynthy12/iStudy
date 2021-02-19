@@ -15,7 +15,6 @@ urlpatterns = [
     path('customusers/',views.customuserList.as_view()),
     path('users/',views.usersList.as_view()),
     path('api/register/', views.registration_view, name='register'),
-    # path('api/customregister/', views.custom_registration_view, name='register'),
     path('api/login/', obtain_auth_token, name='login'),
 
 
