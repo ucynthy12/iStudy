@@ -40,8 +40,7 @@ class Module(models.Model):
 
     def __str__(self):
         return self.year
-
-       
+      
 
 class Courses(models.Model):
     course_name=models.CharField(max_length=255)
@@ -79,9 +78,6 @@ class Subjects(models.Model):
 
     def __str__(self):
         return f'{self.subject_name} Subject'
-
-
-
 
 
 class StudentNotification(models.Model):

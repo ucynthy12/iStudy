@@ -10,15 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
+# from url import url
 import os 
 import cloudinary
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build urls inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -45,12 +46,13 @@ cloudinary.config(
   secure =True,
 )
 
-LOGOUT_REDIRECT_URL = 'index'
-LOGIN_REDIRECT_URL='index'
+LOGOUT_REDIRECT_URL = 'index.html'
+LOGIN_REDIRECT_URL='index.html'
 # Application definition
 
 INSTALLED_APPS = [
     'istudy',
+    'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
