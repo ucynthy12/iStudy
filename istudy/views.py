@@ -95,6 +95,11 @@ def registration_view(request):
             print(data)
         return Response(data)
 
+def courses_view(request):
+    all_Courses = Courses.objects.all()
+    print("all_Courses")
+    return render(request,'home_for_students.html')
+
 # @api_view(['POST',])
 # def custom_registration_view(request):
 
@@ -113,3 +118,4 @@ def registration_view(request):
 #         else:
 #             data = serializer.errors
 #         return Response(data)
+

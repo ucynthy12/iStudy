@@ -17,6 +17,7 @@ urlpatterns = [
     url('users/',views.usersList.as_view()),
     url('api/register/', views.registration_view, name='register'),
     url('api/login/', obtain_auth_token, name='apilogin'),
+    url('courses', views.courses_view, name='courses'),
     
 
 

@@ -5,19 +5,11 @@
 
 {{block.super}}
 
-<div class="container">
-    <div class="row">
-        {% for Courses in all_Courses %}
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{course_name}}</h5>
-                    <p class="card-text">{{Course.module_id}}</p>  
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+
+{% for course in all_Courses %}
+    <h5>{{course.course_name}}</h5>
+    <p>{{course.created}}</p>  
+        
+{% endfor %}
 
 {% endblock %}
